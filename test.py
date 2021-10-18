@@ -34,9 +34,10 @@ img = Image.open('My Post.jpg')
 draw = ImageDraw.Draw(img)
 w, h = draw.textsize(msg)
 draw.text(((W-w)/2,335),text='{}'.format(msg),fill=(255, 153, 0),font=font,anchor="mm",stroke_width=1,stroke_fill=(255, 153, 0))
-draw.text(((W1-w)/2,455),f'From  {start}  To  {end}',fill=(51, 51, 51),font=font2,anchor="mm")
-draw.text(((W2-w)/2,600),f'{x.strftime("%x")}',fill=(51, 51, 51),font=font2,anchor="mm")
-draw.text(((W3-w)/2,590),'L. Sanjana',fill=(0, 0, 0),font=font3,anchor="mm")
+draw.text((1100/2,455),f'From  {start}  To  {end}',fill=(51, 51, 51),font=font2,anchor="mm")
+draw.text((510/2,600),f'{x.strftime("%x")}',fill=(51, 51, 51),font=font2,anchor="mm")
+draw.text((1530/2,590),'L. Sanjana',fill=(0, 0, 0),font=font3,anchor="mm")
+
 
 # img.show()
 st.image(img)
