@@ -14,7 +14,7 @@ def get_image_download_link(img):
 	buffered = BytesIO()
 	img.save(buffered, format="JPEG")
 	img_str = base64.b64encode(buffered.getvalue()).decode()
-	href = f'<a href="data:file/jpg;base64,{img_str}">Download result</a>'
+	href = f'<a href="data:file/jpg;base64,{img_str}" download="cirtificate.jpg">Download result</a>'
 	return href
 
 
@@ -42,7 +42,7 @@ draw.text((1530/2,590),'L. Sanjana',fill=(0, 0, 0),font=font3,anchor="mm")
 # img.show()
 st.image(img)
 img.save('test.jpg')
-st.markdown(f'<a href="test.jpg" download="{msg}.jpg">Download</a>', unsafe_allow_html=True)
+st.markdown(get_image_download_link(img), unsafe_allow_html=True)
 
 
 
